@@ -1,0 +1,380 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #005, #002);
+    text-align: center;
+}
+input {
+    height: 35px;
+    font-size: 24px;
+    margin: 20px;
+    color: #00d;
+    border-radius: 50px;
+    padding-left: 20px;
+    width: 80%;
+    border: 2.5px solid #fff;
+    box-shadow: inset 0px 0px 5px #000;
+    font-weight: 200;
+}
+.btnShow {
+    width: 40%;
+    height: 40px;
+    font-size: 25px;
+    font-weight: 200;
+    border-radius: 10px;
+    border: none;
+    color: aliceblue;
+    box-shadow: 0px 0px 10px #0af;
+    background: linear-gradient(45deg, aqua, blue);
+}
+.btnShow:active {
+    border:;
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 10px aqua;
+    color: #009;
+    background: linear-gradient(45deg,blue, aqua);
+}
+h1 {
+    text-align: start;
+    margin: 0px 20px 20px 20px;
+    padding: 10px;
+    color: aqua;
+}
+h1::first-letter {
+    color: #0af;
+    font-size: 50px;
+    font-weight: 200;
+}
+h1::after {
+    border: 2px solid aqua;
+    content: 'Amour dga';
+    font-size: 0.1px;
+    width: 140px;
+    border-radius: 50px;
+    padding-inline: 4px;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    text-align: center;
+    animation: goback linear 3s infinite alternate;
+}
+/* SECTION (contenair)  DES VILLES*/
+.listVilles {
+    color: aqua;
+    height: 300px;
+    padding: 5px;
+    padding: 0px;
+    background: none;
+    /* width: 40%;*/
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    text-align: center;
+
+}
+/* Bouton Pour derouler la liste des villes */
+#villes {
+    border: 1px solid;
+    border-radius: 5px;
+    width: 100px;
+}
+#villes:active {
+    color: blue;
+}
+/* La listes des villes */
+.villes {
+    display: none;
+    border-radius: 10px;
+    padding: 5px;
+    height: 280px;
+    background: linear-gradient(90deg, #005, #001);
+    border: 1px solid aqua;
+    overflow: scroll;
+}
+.villes p {
+    background: linear-gradient(45deg, #005, #001);
+    margin: 0;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+/* SECTION (contenair) Affichage Meteo */
+.meteo {
+    border: 1px solid aqua;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    justify-self: center;
+    margin: 20px 0px;
+    padding: 0;
+}
+/* SECTION (contenair)  de la Temperature*/
+.temp-div {
+    border: 1px solid aqua;
+    height: 100px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+/* SECTION (contenair) de la vitesse du vent*/
+.vent-div {
+    border: 1px solid aqua;
+    height: auto;
+    color: aqua;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+/* SECTION (contenair) et Affichage Des Coordonnées Géographiques*/
+.coord {
+    border: 1px solid aqua;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    color: aqua;
+    line-height: 1.8;
+}
+.coord p {
+    font-size: 12px;
+}
+/* SECTION (contenair) de la vitesse du vent et des Coordonnées Combinées */
+.vent-coord {
+    display: flex;
+    justify-content: center;
+}
+/*Titre de la Temperature*/
+.temp-div h5 {
+    float: left;
+    color: aqua;
+    position: relative;
+    top: -20px;
+}
+/*Affichage de la Temperature*/
+#temp {
+    float: right;
+    position: relative;
+    top: -20px;
+    left: -20px;
+    color: aqua;
+    font-size: 40px;
+    font-weight: 300;
+}
+/* Affichage de la vitesse du vent*/
+#vent {
+    font-size: 40px;
+    font-weight: 200;
+}
+/* Affichage du message D'Erreur*/
+.erreur {
+    background: linear-gradient(45deg, aqua, #559);
+    color: red;
+    font-weight: 300;
+    justify-self: center;
+    position: fixed;
+    top: 45%;
+    left: 12.5%;
+    padding: 5px;
+    letter-spacing: 5px;
+    display: none;
+}
+/* Nom de la ville Dont la Meteo est Affichée */
+#titre {
+    font-size: 30px;
+    font-weight: 200;
+    color: aquamarine;
+}
+
+
+/* Mode Clair (Jour) De L'Application*/
+body.claire {
+    background: linear-gradient(45deg,#fff, aqua, #fff);
+}
+#ToggleMode {
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    padding: 5px;
+    border: none;
+    background: linear-gradient(40deg, #99f, #909);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px aqua;
+}
+.claire #ToggleMode {
+    box-shadow: 0px 0px 10px #000;
+}
+.claire h1 {
+    text-align: start;
+    margin: 0px 20px 20px 20px;
+    padding: 10px;
+    color: blue;
+}
+.claire h1::first-letter {
+    color: magenta;
+    font-size: 50px;
+    font-weight: 200;
+}
+.claire h1::after {
+    border: 2px solid blue;
+    border-radius: 50px;
+    content: 'Amour dga';
+    font-size: 0.1px;
+    width: 140px;
+    overflow: scroll;
+    padding-inline: 4px;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    text-align: center;
+    animation: goback linear 3s infinite alternate;
+}
+@keyframes goback{
+    %0{
+        letter-spacing: normal;
+    }
+    50%{
+        letter-spacing: 5px;
+    }
+    100%{
+        letter-spacing: 10px;
+    }
+}
+.claire .listVilles {
+    color: blue;
+    height: 300px;
+    padding: 5px;
+    padding: 0px;
+    background: none;
+    /* width: 40%;*/
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    text-align: center;
+
+}
+/* Bouton Pour derouler la liste des villes */
+.claire #villes {
+    border: 1px solid;
+    border-radius: 5px;
+    width: 100px;
+}
+.claire #villes:active {
+    color: blue;
+}
+/* La listes des villes */
+.claire .villes {
+    display: none;
+    border-radius: 10px;
+    padding: 5px;
+    height: 280px;
+    background: linear-gradient(90deg, aqua, #ddd);
+    border: 1px solid blue;
+    overflow: scroll;
+}
+.claire .villes p {
+    background: linear-gradient(45deg, aqua, #ddd);
+    margin: 0;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+/* SECTION (contenair) Affichage Meteo */
+.claire .meteo {
+    border: 1px solid blue;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    justify-self: center;
+    margin: 20px 0px;
+    padding: 0;
+}
+/* SECTION (contenair)  de la Temperature*/
+.claire .temp-div {
+    border: 1px solid blue;
+    height: 100px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+/* SECTION (contenair) de la vitesse du vent*/
+.claire .vent-div {
+    border: 1px solid blue;
+    height: auto;
+    color: blue;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+/* SECTION (contenair) et Affichage Des Coordonnées Géographiques*/
+.claire .coord {
+    border: 1px solid blue;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    color: blue;
+    line-height: 1.8;
+}
+.claire .coord p {
+    font-size: 12px;
+}
+/* SECTION (contenair) de la vitesse du vent et des Coordonnées Combinées */
+.claire .vent-coord {
+    display: flex;
+    justify-content: center;
+}
+/*Titre de la Temperature*/
+.claire .temp-div h5 {
+    float: left;
+    color: blue;
+    position: relative;
+    top: -20px;
+}
+/*Affichage de la Temperature*/
+.claire #temp {
+    float: right;
+    position: relative;
+    top: -20px;
+    left: -20px;
+    color: blue;
+    font-size: 40px;
+    font-weight: 300;
+}
+/* Affichage de la vitesse du vent*/
+.claire #vent {
+    font-size: 40px;
+    font-weight: 200;
+}
+/* Affichage du message D'Erreur*/
+.claire .erreur {
+    background: linear-gradient(45deg, blue, #559);
+    color: red;
+    font-weight: 300;
+    justify-self: center;
+    position: fixed;
+    top: 45%;
+    left: 12.5%;
+    padding: 5px;
+    letter-spacing: 5px;
+    display: none;
+}
+/* Nom de la ville Dont la Meteo est Affichée */
+.claire #titre {
+    font-size: 30px;
+    font-weight: 200;
+    color: blue;
+}
+.claire .btnShow {
+    width: 40%;
+    height: 40px;
+    font-size: 25px;
+    font-weight: 200;
+    border-radius: 10px;
+    border: none;
+    color: aqua;
+    box-shadow: 0px 0px 10px purple;
+    background: linear-gradient(45deg, magenta, blue);
+}
+.claire .btnShow:active {
+    border:;
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 10px blue;
+    color: skyblue;
+    background: linear-gradient(45deg,blue, magenta);
+}
